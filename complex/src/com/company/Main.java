@@ -3,7 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        complex b = new complex(5,1);
+        complex b = new complex(5,1 );
         b.print();
 
         complex a = new complex();
