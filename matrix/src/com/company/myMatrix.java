@@ -15,7 +15,7 @@ public class myMatrix {
     }
 
     public static myMatrix multMatrix(myMatrix M1, myMatrix M2){
-        if (M1.rows != M2.cols){
+        if (M1.cols != M2.rows){
             throw new colmsUniqleToRowsExeption();
         }
 
@@ -23,7 +23,7 @@ public class myMatrix {
         for (int i = 0; i < resMyltAr.length; i++) {
             for (int j = 0; j < resMyltAr[0].length; j++) {
                 double elem = 0;
-                for (int k = 0; k < M1.rows; k++) {
+                for (int k = 0; k < M1.cols; k++) {
                     elem += M1.data[i][k] * M2.data[k][j];
                 }
                 resMyltAr[i][j] = elem;
